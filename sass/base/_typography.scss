@@ -1,0 +1,93 @@
+body {
+  font-family: 'Cabin', sans-serif !important;
+  font-weight: 400;
+  letter-spacing: .04rem;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-black;
+}
+
+//  Starting Heading
+
+.heading-primary {
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    color: $color-black;
+    font-family: 'Cabin', sans-serif;
+    letter-spacing: -1.3px;
+    font-weight: 700;
+    font-size: 5.2rem;
+    word-spacing: 5px;
+
+    @include respond(big-desktop) {
+      font-size: 4.5rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 4.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3.8rem;
+    }
+  }
+}
+
+/* ------------------ Heading box only for secondary heading ------------------ */
+
+.heading-secondary {
+  font-family: $font-bold;
+  font-weight: 700;
+  // background-image:  
+  //   linear-gradient(to right bottom, $color-primary, $color-primary-light);
+  font-size: 4.5rem;
+  // -webkit-background-clip: text;
+  letter-spacing: .05rem;
+  display: inline-block;
+  padding-bottom: 2rem;
+  color: $color-black;
+  text-shadow: 1px 3px 5px rgba($color-black, 0.1);
+  transition: all .2s;
+
+  @include respond(tab-port) {
+    font-size: 3.8rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    font-size: 3.2rem;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba($color-primary, 0.1);
+    padding-bottom: 10px;
+  }
+
+  @include respond(sm-phone) {
+    width: 75%;
+  }
+}
+
+
+.paragraph {
+  font-size: $default-font-size;
+  color: $color-black;
+  font-family: $font-regular;
+  font-weight: 400;
+  line-height: 2.8rem;
+
+  @include respond(tab-land) {
+    line-height: 2.7rem;
+  }
+
+  @include respond(phone) {
+    line-height: 2.9rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

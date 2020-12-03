@@ -1,0 +1,477 @@
+/* ============================================ */
+/* ================ banner part ================ */
+/* ============================================ */
+
+.section-banner {
+  margin-top: 4.5rem;
+  padding: 0;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &_logo {
+    margin-top: 34px;
+    width: 100%;
+    @include flex-row_center;
+
+    @include respond(phone) {
+      margin-top: 24px;
+    }
+
+    &-icon {
+      margin-right: 20px;
+
+      @include respond(phone) {
+        height: 44px;
+        width: auto;
+        margin-right: 0;
+      }
+
+      img {
+        width: auto;
+        height: auto;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+
+        @include respond(phone) {
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &_des {
+    font-size: 22px;
+    margin-top: 35px;
+    font-family: $font-regular;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    width: 76%;
+    line-height: 35px;
+
+    @include respond(phone) {
+      width: 92%;
+      font-size: 18px;
+      line-height: 30px;
+      margin-top: 28px;
+    }
+  }
+
+  &-tag_box {
+    @include flex-row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @include respond(phone) {
+      margin-top: 22px;
+    }
+
+    li {
+      list-style-type: none !important;
+      font-size: 18px;
+      font-family: $font-bold;
+      font-weight: 700;
+      padding: 7px 24px;
+      margin: 20px 9px 0 9px;
+      border-radius: 25px;
+
+      @include respond(phone) {
+        font-size: 16px;
+        padding: 5px 24px;
+        margin: 7px 10px;
+      }
+    }
+
+    .tag-1 {
+      background-color: #C7FFD8;
+      color: #007C3C;
+    }
+
+    .tag-2 {
+      background-color: #FFD4E9;
+      color: #F2036B;
+    }
+
+    .tag-3 {
+      background-color: #FFE8CE;
+      color: #FF9900;
+    }
+
+    .tag-4 {
+      background-color: #D6D9FF;
+      color: #4742BF;
+    }
+
+    .tag-5 {
+      background-color: #FFEEBC;
+      color: #FFA100;
+    }
+
+    .tag-6 {
+      background-color: #B8F4E7;
+      color: #00BA88;
+    }
+
+  }
+}
+
+
+/* ============================================ */
+/* ================ card part ================ */
+/* ============================================ */
+
+.section-post {
+  padding: 0;
+  margin-top: 20px;
+}
+
+.post {
+  @include flex-row;
+  justify-content: space-between;
+  margin-top: 45px;
+  padding: 18px 22px 18px 18px;
+  border-radius: 10px;
+  background-color: #F8F8F8;
+
+  @include respond(phone) {
+    margin: 20px 0 12px 0;
+    padding: 18px 22px;
+  }
+
+  &-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-details {
+    @include flex-column;
+
+    @include respond(phone) {
+      margin-top: 25px;
+    }
+  }
+
+  &-save_btn {
+    margin-left: auto;
+  }
+
+  &-heading {
+    font-family: $font-bold;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: #131019;
+    margin-bottom: 0;
+    cursor: pointer;
+    margin-top: -6px;
+
+    @include respond(phone) {
+      width: 80%;
+      margin-top: -24px;
+    }
+  }
+
+  &-des {
+    font-family: $font-medium;
+    font-weight: 500;
+    font-size: 14px;
+    color: #191919;
+    margin-top: 5px;
+    padding-right: 35px;
+    line-height: 18px;
+    margin-bottom: 0;
+
+    @include respond(phone) {
+      margin-top: 7px;
+    }
+  }
+
+  &-details_btm {
+    @include flex-row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  &-tag {
+    font-size: 12px;
+    font-family: $font-bold;
+    font-weight: 700;
+    width: 110px;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 3px 0;
+    border-radius: 20px;
+
+    @include respond(phone) {
+      padding: 4px 0;
+    }
+
+    &-1 {
+      background-color: #C7FFD8;
+      color: #007C3C;
+    }
+
+    &-2 {
+      background-color: #FFD4E9;
+      color: #F2036B;
+    }
+
+    &-3 {
+      background-color: #FFE8CE;
+      color: #FF9900;
+    }
+
+    &-4 {
+      background-color: #D6D9FF;
+      color: #4742BF;
+    }
+
+    &-5 {
+      background-color: #FFEEBC;
+      color: #FFA100;
+    }
+
+    &-6 {
+      background-color: #B8F4E7;
+      color: #00BA88;
+    }
+  }
+
+  &_platform {
+    @include flex-row_center;
+    margin-bottom: 0;
+
+    li {
+      list-style-type: none !important;
+
+      .post_platform-icon {
+        margin-left: 14px;
+
+        img {
+          width: auto;
+          height: 30px;
+
+          @include respond(phone) {
+            height: 32px;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+// Modal CSS
+
+// All Css
+
+.modal-open__btn {
+  outline: none !important;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.8rem;
+  border-radius: 5px;
+  background-color: #142cd7;
+  color: #fff;
+  border-color: transparent !important;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: #000;
+  }
+}
+
+// Modal
+.my_modal-bg_dark {
+  position: relative;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.my_modal-bg_dark::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.02);  
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modal-dialog {
+  max-width: 840px !important;
+  position: relative;
+  z-index: 9;
+
+  @include respond(phone) {
+    margin: .5rem 2rem !important;
+  }
+}
+
+.modal-content {
+  border-radius: 15px !important;
+  background-color: #fff !important;
+}
+
+.my-modal_header {
+  padding: 0 20px !important;
+  border-bottom: 1px solid transparent !important;
+
+  .close {
+    font-size: 34px !important;
+    padding: 20px 15px 0 0 !important
+  }
+}
+
+.my_modal {
+  padding: 0px 4rem 4rem 4rem;
+
+  @include respond(phone) {
+    padding: 0px 1.5rem 1.5rem 1.5rem;
+  }
+
+  &-top {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include respond(phone) {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    &_left {
+      width: 32%;
+      height: auto;
+      background-color: #fff;
+      border-radius: 15px;
+      @include flex-row_center;
+      box-shadow: 3px 3px 6px #00000009;
+      overflow: hidden;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &_right {
+      width: 63%;
+      margin-top: 24px;
+
+      @include respond(phone) {
+        width: 100%;
+      }
+      
+      &-header {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 46px;
+
+        @include respond(phone)  {
+          font-size: 28px;
+          line-height: 34px;
+        }
+      }
+
+      &-des {
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 13px;
+
+        @include respond(phone) {
+          font-size: 16px;
+          margin-top: 10px;
+          line-height: 24px;
+        }
+      }
+
+      &-tag {
+        font-size: 18px;
+        width: 185px;
+        margin-top: 35px;
+        padding: 7px 0;
+        border-radius: 25px;
+
+        @include respond(phone) {
+          font-size: 15px;
+          width: 160px;
+          margin-top: 22px;
+          padding: 6px 0;
+        }
+      }
+    }
+  }
+
+  &-header {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #FD0044;
+
+    @include respond(phone) {
+      font-size: 22px;
+      margin-top: 22px;
+    }
+  }
+
+  &-description {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 30px;
+    color: #000;
+
+    @include respond(phone) {
+      font-size: 16px;
+      margin-top: 10px;
+      line-height: 23px;
+    }
+  }
+
+  &-middle_bottom {
+    
+
+    .modal-post_platform {
+      @include flex-row;
+      align-items: center;
+
+      li {
+        margin-right: 12px;
+        list-style-type: none !important;
+      }
+      
+      &-icon {
+        
+        img {
+          width: auto;
+          height: 46px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}
